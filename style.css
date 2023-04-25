@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100;200;300;400;500;600;700;800&family=Macondo&family=Poppins:wght@200;300;400;500;600;700;800&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'K2D', sans-serif !important;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    background: url('./Images/background.jpg'), rgba(100, 100, 100, 0.9);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modalArea{
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+.modalText{
+    /* background-color: blueviolet; */
+    border-bottom: 3px solid #222222;
+    padding: 10px 0px;
+}
+.modalText h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4rem;
+    color: #222222;
+}
+.modalBtn{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.poster{
+    border: 3px solid #222222;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.poster .posterImg{
+    border-radius: 0px;
+}
+.posterImg:hover{
+    filter: brightness(0.5);
+    transition: 0.2s;
+}
+
+.poster .playBtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    background-color: rgb(224, 0, 0);
+    border-radius: 5px;
+    z-index: 1;
+}
+.playBtn:hover + .posterImg{
+    filter: brightness(0.5);
+    transition: 0.2s;
+}
+.poster .playBtn i{
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+
+.overlay{
+    background-color: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.modalBox{
+    background-color: #eeeeee;
+    position: absolute;
+    z-index: 100;
+    width: 900px;
+    height: 500px;
+    border-radius: 5px;
+    animation: animateModal 0.2s linear 0s 1 alternate forwards;
+}
+@keyframes animateModal {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.modalBoxText{
+    padding: 12px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalBoxText h1{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: #222222;
+}
+.modalBoxText span i{
+    font-size: 2.8rem;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.modalBoxVideo{
+    height: 432px;
+    padding: 10px 0px;
+}
+.modalBoxVideo iframe{
+    border-radius: 5px;
+}
+
+.hide{
+    display: none;
+}

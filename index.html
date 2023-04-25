@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Font-Awesome-Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BoxIcons  -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div id="main">
+
+        <div class="modalArea">
+            <div class="modalRow row m-0 px-5 py-1">
+
+                <div class="modalText col-12">
+                    <h1 class="m-0"># Javascript Playlist</h1>
+                </div>
+
+                <div class="modalBtn col-12">
+                    <div class="poster">
+                        <button class="playBtn"><i class="fa-solid fa-play"></i></button>
+                        <img src="./Images/Poster Image.png" alt="" width="400" class="img-fluid posterImg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay hide"></div>
+
+        <div class="modalBox hide">
+            <div class="modalBoxRow row m-0 px-5 py-1">
+
+                <div class="modalBoxText col-12">
+                    <h1 class="m-0">Javascript Tutorials</h1>
+                    <span class="closeBtn"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+
+                <div class="modalBoxVideo col-12">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PLjpp5kBQLNTSvHo6Rp4Ky0X8x_MabmKye" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="modalVideo hide" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
